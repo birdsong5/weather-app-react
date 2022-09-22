@@ -1,0 +1,49 @@
+h1,
+h4,
+.temp-now {
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  font-size: 45px;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+.temp-now a {
+  color: rgb(147, 217, 242);
+  text-decoration: none;
+}
+
+.temp-now a:hover {
+  text-decoration: underline;
+}
+
+.temp-now {
+  margin-bottom: 0;
+}
+
+.temperature-now-span {
+  font-size: 50px;
+  position: relative;
+  top: 15px;
+}
+
+h4 {
+  margin: 0;
+  text-transform: capitalize;
+}
+
+#weather-description {
+  text-transform: capitalize;
+  opacity: 0.8;
+  max-height: 20px;
+}
+
+.weather-today {
+  text-align: center;
+  color: white;
+  line-height: 40px;
+  font-size: 30px;
+}
