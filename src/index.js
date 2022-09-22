@@ -21,7 +21,7 @@ root.render(
         className="git"
         href="https://github.com/birdsong5/weather-app-react"
         target="_blank"
-        rel="noopener"
+        rel="noreferrer"
       >
         Open-source code
       </a>{" "}
@@ -30,7 +30,7 @@ root.render(
         className="linkedin"
         href="https://www.linkedin.com/in/inna-troian-772168239/"
         target="_blank"
-        rel="noopener"
+        rel="noreferrer"
       >
         Inna Troian
       </a>
