@@ -1,38 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+import Weatherdata from "./WeatherData";
 
 import "./Weather.css";
 
-export default function Weather() {
-  return (
-    <div className="row">
-      <div className="col-md-5">
-        <h1>Prague</h1>
-        <div className="temp-now">
-          <img
-            src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-            alt="Clear"
-            id="icon"
-          />
-          <span className="temperature-now-span">18°C</span>
-        </div>
-        <h4>Sunny</h4>
+export default function Weather(props) {
+  const [city, setCity] = useState(props.defaultCity);
+  const [weatherInfo, setWeatherInfo] = useState({ ready: false });
+
+  function displayWeather(response) {
+    setWeatherInfo({
+      ready: true,
+      city: response.data.name,
+      date: new Date(response.data.dt * 1000),
+      temperature: Math.round(response.data.main.temp),
+      description: response.data.weather[0].description,
+      humidity: response.data.main.humidity,
+      wind: Math.round(response.data.wind.speed),
+      feels: Math.round(response.data.main.feels_like),
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+    });
+  }
+
+  function search() {
+    let apiKey = "468253ff0d2c7b9f49a43bcd7fd91cbf";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayWeather);
+  }
+
+  function displayCity(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function updateCity(event) {
+    setCity(event.target.value);
+  }
+
+  if (weatherInfo.ready) {
+    return (
+      <div>
+        <nav className="navbar">
+          <form className="search-form" role="search" onSubmit={displayCity}>
+            <input
+              className="form-control"
+              type="search"
+              placeholder="Search for a city.."
+              aria-label="Search"
+              onChange={updateCity}
+            />
+            <button className="btn btn-outline-light search-btn" type="submit">
+              Search
+            </button>
+            <button
+              className="btn btn-outline-light location-btn"
+              type="submit"
+            >
+              My location
+            </button>
+          </form>
+        </nav>
+        <Weatherdata data={weatherInfo} />;
       </div>
-      <div className="col-md-7">
-        <div className="weather-today">
-          <div className="day-today">Sunday, September 11</div>
-          <div className="time-now">18:11</div>
-          <div>
-            Wind: <span>7</span> km/h
-          </div>
-          <div>
-            Humidity: <span>67</span>%
-          </div>
-          <div>
-            Feels like <span>18</span>
-            <span>°C</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+    );
+  } else {
+    search();
+    return "Loading...";
+  }
 }

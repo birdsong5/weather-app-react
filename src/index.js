@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import "bootstrap/dist/css/bootstrap.css";
 import "@fontsource/questrial";
 import "./index.css";
-import Navbar from "./Navbar";
 import Weather from "./Weather";
 import Forecast from "./Forecast";
 import reportWebVitals from "./reportWebVitals";
@@ -12,8 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <div class="app-body">
-      <Navbar />
-      <Weather />
+      <Weather defaultCity="Prague" />
       <Forecast />
     </div>
     <div className="author">
