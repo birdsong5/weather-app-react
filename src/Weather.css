@@ -44,13 +44,11 @@ h1 {
 
 .temp-now {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 .temperature-now-span {
   font-size: 50px;
-  position: relative;
-  top: 15px;
 }
 
 h4 {

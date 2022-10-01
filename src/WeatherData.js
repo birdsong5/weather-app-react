@@ -9,9 +9,10 @@ export default function Weatherdata(props) {
       <div className="col-md-5">
         <h1>{props.data.city}</h1>
         <div className="temp-now">
-          <div id="icon">
+          <div className="icon">
             <WeatherIcon code={props.data.icon} />
           </div>
+
           <span className="temperature-now-span">
             {props.data.temperature}°C
           </span>
