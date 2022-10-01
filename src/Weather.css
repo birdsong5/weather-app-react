@@ -33,15 +33,6 @@ h1 {
   margin-bottom: 0;
 }
 
-.temp-now a {
-  color: rgb(147, 217, 242);
-  text-decoration: none;
-}
-
-.temp-now a:hover {
-  text-decoration: underline;
-}
-
 .temp-now {
   margin-top: 0;
   margin-bottom: 0;
@@ -49,6 +40,19 @@ h1 {
 
 .temperature-now-span {
   font-size: 50px;
+}
+
+.temperature-now-span .units {
+  font-size: 25px;
+  position: relative;
+  top: -15px;
+}
+.temperature-now-span .units a {
+  color: rgb(147, 217, 242);
+  text-decoration: none;
+}
+.temperature-now-span .units a:hover {
+  text-decoration: underline;
 }
 
 h4 {
