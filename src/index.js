@@ -4,35 +4,13 @@ import "bootstrap/dist/css/bootstrap.css";
 import "@fontsource/questrial";
 import "./index.css";
 import Weather from "./Weather";
-import Forecast from "./Forecast";
+
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <div class="app-body">
-      <Weather defaultCity="Prague" />
-      <Forecast />
-    </div>
-    <div className="author">
-      <a
-        className="git"
-        href="https://github.com/birdsong5/weather-app-react"
-        target="_blank"
-        rel="noreferrer"
-      >
-        Open-source code
-      </a>{" "}
-      by{" "}
-      <a
-        className="linkedin"
-        href="https://www.linkedin.com/in/inna-troian-772168239/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        Inna Troian
-      </a>
-    </div>
+    <Weather defaultCity="Prague" />
   </React.StrictMode>
 );
 
