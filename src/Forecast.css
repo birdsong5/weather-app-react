@@ -17,6 +17,9 @@
   );
   border-radius: 6px;
 }
+.card-subtitle {
+  text-transform: capitalize;
+}
 .forecast-icon {
   margin: 0 auto;
 }
