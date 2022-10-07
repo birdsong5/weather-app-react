@@ -19,6 +19,7 @@
 }
 .card-subtitle {
   text-transform: capitalize;
+  opacity: 0.8;
   padding-bottom: 6.5px;
   max-height: 25px;
 }

@@ -11,7 +11,7 @@ export default function Weatherdata(props) {
         <h1>{props.data.city}</h1>
         <div className="temp-now">
           <div className="icon">
-            <WeatherIcon code={props.data.icon} size={100} width={100} />
+            <WeatherIcon code={props.data.icon} size={110} width={110} />
           </div>
           <WeatherTemperature celsius={props.data.temperature} />
         </div>
@@ -20,15 +20,19 @@ export default function Weatherdata(props) {
       <div className="col-md-7">
         <div className="weather-today">
           <FormattedDate date={props.data.date} />
-          <div>
-            Wind: <span>{props.data.wind}</span> km/h
-          </div>
-          <div>
-            Humidity: <span>{props.data.humidity}</span>%
-          </div>
-          <div>
-            Feels like <span>{props.data.feels}</span>
-            <span>°C</span>
+          <div className="weather-info-box">
+            <div className="wind-box">
+              <span role="img">💨</span> Wind:{" "}
+              <div className="wind-data">{props.data.wind} km/h</div>
+            </div>
+            <div className="humidity-box">
+              <span role="img">💧</span>Humidity:{" "}
+              <div className="humidity-data">{props.data.humidity}%</div>
+            </div>
+            <div className="feels-like-box">
+              <span role="img">🌡</span>Feels like{" "}
+              <div className="feels-like-data">{props.data.feels}°C</div>
+            </div>
           </div>
         </div>
       </div>

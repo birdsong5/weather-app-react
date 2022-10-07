@@ -74,7 +74,7 @@ export default function Weather(props) {
             className="git"
             href="https://github.com/birdsong5/weather-app-react"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Open-source code
           </a>{" "}
@@ -83,7 +83,7 @@ export default function Weather(props) {
             className="linkedin"
             href="https://www.linkedin.com/in/inna-troian-772168239/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Inna Troian
           </a>

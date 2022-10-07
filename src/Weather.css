@@ -25,13 +25,11 @@
   background-color: transparent;
 }
 .form-control,
-.search-btn,
-.location-btn {
+.search-btn {
   padding: 6px 10px;
   margin-right: 10px;
 }
-.search-btn,
-.location-btn {
+.search-btn {
   width: 180px;
 }
 
@@ -87,6 +85,42 @@ h4 {
 .weather-today {
   text-align: center;
   color: white;
-  line-height: 40px;
+  font-size: 18px;
+}
+.time-updated {
+  line-height: 1.3;
+  width: 50%;
+  background-color: rgb(35, 32, 108);
+  padding: 5px 10px;
+  margin: 0 auto 10px;
+  border-radius: 10px;
+}
+.updated-line {
+  font-size: 15px;
+  color: rgb(173, 192, 230);
+  margin-bottom: 0;
+}
+
+.day-today,
+.time-now {
+  font-size: 22px;
+}
+.weather-info-box {
+  display: flex;
+  justify-content: center;
+}
+.weather-info-box .wind-box,
+.weather-info-box .humidity-box,
+.weather-info-box .feels-like-box {
+  line-height: 1.6;
+  width: 120px;
+  background-color: rgb(35, 32, 108);
+  padding: 5px 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.weather-today .wind-data,
+.weather-today .humidity-data,
+.weather-today .feels-like-data {
   font-size: 30px;
 }
