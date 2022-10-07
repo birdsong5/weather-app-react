@@ -22,15 +22,14 @@ export default function Weatherdata(props) {
           <FormattedDate date={props.data.date} />
           <div className="weather-info-box">
             <div className="wind-box">
-              <span role="img">💨</span> Wind:{" "}
-              <div className="wind-data">{props.data.wind} km/h</div>
+              Wind: <div className="wind-data">{props.data.wind} km/h</div>
             </div>
             <div className="humidity-box">
-              <span role="img">💧</span>Humidity:{" "}
+              Humidity:{" "}
               <div className="humidity-data">{props.data.humidity}%</div>
             </div>
             <div className="feels-like-box">
-              <span role="img">🌡</span>Feels like{" "}
+              Feels like{" "}
               <div className="feels-like-data">{props.data.feels}°C</div>
             </div>
           </div>
