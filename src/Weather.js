@@ -63,15 +63,9 @@ export default function Weather(props) {
                 >
                   Search
                 </button>
-                <button
-                  className="btn btn-outline-light location-btn"
-                  type="submit"
-                >
-                  My location
-                </button>
               </form>
             </nav>
-            <Weatherdata data={weatherInfo} />;
+            <Weatherdata data={weatherInfo} />
           </div>
           <Forecast coordinates={weatherInfo.coordinates} />
         </div>

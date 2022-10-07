@@ -20,7 +20,7 @@ export default function WeatherTemperature(props) {
 
   if (unit === "celsius") {
     return (
-      <span className="temperature-now-span">
+      <div className="temperature-now-span">
         {props.celsius}
         <span className="units">
           <span className="celsiusUnit">°C</span> |
@@ -30,7 +30,7 @@ export default function WeatherTemperature(props) {
             </a>
           </span>
         </span>
-      </span>
+      </div>
     );
   } else {
     return (

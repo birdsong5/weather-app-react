@@ -26,7 +26,7 @@ export default function WeatherForecastDay(props) {
       <div className="card-body">
         <h5 className="card-title">{day()}</h5>
         <h6 className="card-subtitle">{props.data.weather[0].description}</h6>
-        <WeatherIcon code={props.data.weather[0].icon} size={36} color="navy" />
+        <WeatherIcon code={props.data.weather[0].icon} size={60} width={60} />
         <img
           src=""
           alt=""
@@ -37,7 +37,7 @@ export default function WeatherForecastDay(props) {
           <span className="weather-forecast-max-temp">
             {maxTemperature()}°C
           </span>{" "}
-          /
+          /{" "}
           <span className="weather-forecast-min-temp">
             {minTemperature()}°C
           </span>

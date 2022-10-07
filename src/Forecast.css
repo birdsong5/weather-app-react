@@ -19,6 +19,8 @@
 }
 .card-subtitle {
   text-transform: capitalize;
+  padding-bottom: 6.5px;
+  max-height: 25px;
 }
 .forecast-icon {
   margin: 0 auto;
